@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,7 @@ import OutputElem from '../../../Components/OutputElem';
 import TableElem from '../../../Components/TableElem';
 import CardElem from '../../../Components/CardElem';
 import calculationFunctions from '../Calculations/calculations';
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +24,6 @@ const Outputs = ({
   outputsData
 }) => {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
