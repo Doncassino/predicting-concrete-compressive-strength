@@ -37,7 +37,7 @@ const OutputElem = ({
   data,
   inputsData,
   calculationFunctions,
-  updateValue
+  // updateValue
 }) => {
   const classes = useStyles();
   const outputValue = calculationFunctions(inputsData);
@@ -70,42 +70,5 @@ const OutputElem = ({
     </div>
   );
 };
-
-// const OutputElem1 = ({
-//   data,
-//   inputsData,
-//   calculationFunctions,
-//   updateValue
-// }) => {
-//   const outputValue = calculationFunctions(inputsData);
-//   return (
-//     <InputGroup className="outputElem">
-//       <InputGroupAddon className="groupAddon" addonType="prepend">
-//         <InputGroupText className="groupText">{data.text}</InputGroupText>
-//       </InputGroupAddon>
-//       <InputGroupAddon className="groupAddon" addonType="prepend">
-//         <ToolTips
-//           description={data.description}
-//           target={data.text}
-//         />
-//       </InputGroupAddon>
-//       <Input
-//         className="inputValue"
-//         type="number"
-//         name={data.name}
-//         placeholder={data.name}
-//         value={outputValue}
-//       />
-//       <InputGroupAddon addonType="append">
-//         <Input
-//           className="inputUnit"
-//           type="text"
-//           value={data.unit}
-//           disabled
-//         />
-//       </InputGroupAddon>
-//     </InputGroup>
-//   );
-// };
 
 export default OutputElem;

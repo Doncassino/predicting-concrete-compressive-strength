@@ -4,7 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ChartElem from '../../../Components/ChartElem';
 import InputElem from '../../../Components/InputElem';
+import ButtonElem from '../../../Components/ButtonElem';
 import CardElem from '../../../Components/CardElem';
+import calculationFunctions from '../Calculations/calculations';
 import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
@@ -20,15 +22,15 @@ const useStyles = makeStyles(theme => ({
 
 const Inputs = ({
   inputsData,
-  updateValue
+  updateValue,
 }) => {
   const classes = useStyles();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8500/data`);
-        console.log(data)
+        // const { data } = await axios.get(`http://localhost:8500/data`);
+        // console.log(data)
       } catch (error) {
         console.log(error)
       }
@@ -36,59 +38,68 @@ const Inputs = ({
     fetchData();
   }, []);
 
-
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12}>
           <CardElem
-            title="My Inputs"
-            subtitle="Composition"
+            title="Composition of the concrete"
+            subtitle=""
           >
-            <div>
-              <InputElem 
-                data={inputsData.cement}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.furnace_slag}
-                updateValue={updateValue}
-              /> 
-              <InputElem 
-                data={inputsData.fly_ash}
-                updateValue={updateValue}
-              />              
-              <InputElem 
-                data={inputsData.water}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.super_plasticizer}
-                updateValue={updateValue}
-              />   
-              <InputElem 
-                data={inputsData.coarse_agg}
-                updateValue={updateValue}
-              />  
-              <InputElem 
-                data={inputsData.fine_agg}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.age}
-                updateValue={updateValue}
-              />  
-            </div>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <InputElem 
+                  data={inputsData.cement}
+                  updateValue={updateValue}
+                />
+                <InputElem 
+                  data={inputsData.furnace_slag}
+                  updateValue={updateValue}
+                /> 
+                <InputElem 
+                  data={inputsData.fly_ash}
+                  updateValue={updateValue}
+                />              
+                <InputElem 
+                  data={inputsData.water}
+                  updateValue={updateValue}
+                />
+                <InputElem 
+                  data={inputsData.super_plasticizer}
+                  updateValue={updateValue}
+                />   
+                <InputElem 
+                  data={inputsData.coarse_agg}
+                  updateValue={updateValue}
+                />  
+                <InputElem 
+                  data={inputsData.fine_agg}
+                  updateValue={updateValue}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <InputElem 
+                  data={inputsData.age}
+                  updateValue={updateValue}
+                />
+                <ButtonElem>
+                  Prediction
+                </ButtonElem>
+              </Grid>
+            </Grid>
           </CardElem>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <CardElem
             title="Prediction of Concrete Compressive Strength"
             subtitle=""
           >
             <div>
-
-
+              <OutputElem 
+                data={outputsData.compressive_strength}
+                inputsData={inputsData}
+                calculationFunctions={pred}
+              />
             </div>
           </CardElem>
           <CardElem
@@ -108,7 +119,7 @@ const Inputs = ({
                 }}
               />
           </CardElem>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   )

@@ -1,21 +1,9 @@
 const calculationFunctions = {
-  surfaceRectangle: (inputs) => {
-    const h = inputs.h.value;
-    const b = inputs.b.value;
+  predicitions: (inputs) => {
+    const fck = 30;
 
-    const surface = b * h;
-
-    return surface;
+    return fck  * 2;
   },
-
-  inertiaXX: (inputs) => {
-    const h = inputs.h.value;
-    const b = inputs.b.value;
-
-    const Ixx = b * h**3 /12;
-    
-    return Ixx;
-  }
 }
 
 export default calculationFunctions;
