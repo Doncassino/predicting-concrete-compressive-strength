@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { 
+	Grid,
 	Button,
 } from '@material-ui/core';
 
@@ -19,9 +20,11 @@ const ButtonElem = ({
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-      <Button variant="contained" color="primary">
-        {text}
-      </Button>
+			<Grid item xs={12} sm={6}>
+				<Button variant="contained" color="primary">
+					{text}
+				</Button>
+			</Grid>
 		</div>
 	);
 };

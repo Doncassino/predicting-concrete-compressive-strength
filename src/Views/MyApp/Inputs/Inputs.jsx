@@ -6,6 +6,9 @@ import ChartElem from '../../../Components/ChartElem';
 import InputElem from '../../../Components/InputElem';
 import ButtonElem from '../../../Components/ButtonElem';
 import CardElem from '../../../Components/CardElem';
+import { 
+	Button,
+} from '@material-ui/core';
 import calculationFunctions from '../Calculations/calculations';
 import axios from 'axios';
 
@@ -23,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 const Inputs = ({
   inputsData,
   updateValue,
+  handleChange
 }) => {
   const classes = useStyles();
 
@@ -82,44 +86,16 @@ const Inputs = ({
                   data={inputsData.age}
                   updateValue={updateValue}
                 />
-                <ButtonElem>
-                  Prediction
-                </ButtonElem>
+                <ButtonElem
+                  text={`Predictions`}
+                  onChange={() => {
+                    handleChange(1);
+                  }}
+                />
               </Grid>
             </Grid>
           </CardElem>
         </Grid>
-        {/* <Grid item xs={12} sm={6}>
-          <CardElem
-            title="Prediction of Concrete Compressive Strength"
-            subtitle=""
-          >
-            <div>
-              <OutputElem 
-                data={outputsData.compressive_strength}
-                inputsData={inputsData}
-                calculationFunctions={pred}
-              />
-            </div>
-          </CardElem>
-          <CardElem
-            title="Concrete Compressive Strength"
-            subtitle="per days"
-          >
-            <ChartElem
-                dataForChart={{
-                  chartTitle: '',
-                  value: [
-                    {x: 0, y: 0},
-                    {x: 28, y: 30},
-                    {x: 365, y: 60}
-                  ],
-                  axisName: {x: 'age ', y: 'Concrete compressive strength '},
-                  unit: {x: 'day', y: 'MPa, megapascals'}
-                }}
-              />
-          </CardElem>
-        </Grid> */}
       </Grid>
     </div>
   )
