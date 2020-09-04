@@ -50,16 +50,12 @@ const Outputs = ({
             subtitle="per days"
           >
             <ChartElem
-                dataForChart={{
-                  chartTitle: '',
-                  value: [
-                    {x: 0, y: 0},
-                    {x: 28, y: 30},
-                    {x: 365, y: 60}
-                  ],
-                  axisName: {x: 'age ', y: 'Concrete compressive strength '},
-                  unit: {x: 'day', y: 'MPa, megapascals'}
-                }}
+              dataForChart={{
+                chartTitle: '',
+                value: calculationFunctions.predicitionsStressEvolution(inputsData),
+                axisName: {x: 'age ', y: 'Concrete compressive strength '},
+                unit: {x: 'day', y: 'MPa, megapascals'}
+              }}
               />
           </CardElem>
         </Grid>

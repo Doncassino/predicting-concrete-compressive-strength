@@ -20,7 +20,7 @@ const Menu = {
     { text: "Home", link: "/home", href: "", icon: "dashboard" },
   ],
   MenuSideBarInf: [
-    { text: "Documentation", link: "", href: "https://www.tridyme.com/fr/documentation/fr/developpers/tridyme-webapp-kit-serverless", icon: "chrome_reader_mode" }
+    { text: "Documentation", link: "", href: "https://github.com/Doncassino/predicting-concrete-compressive-strength", icon: "chrome_reader_mode" }
   ]
 };
 
