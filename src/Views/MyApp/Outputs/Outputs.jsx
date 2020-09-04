@@ -8,6 +8,7 @@ import CardElem from '../../../Components/CardElem';
 import ChartElem from '../../../Components/ChartElem';
 import calculationFunctions from '../Calculations/calculations';
 import axios from 'axios';
+import * as tf from '@tensorflow/tfjs';
 
 const useStyles = makeStyles(theme => ({
   root: {

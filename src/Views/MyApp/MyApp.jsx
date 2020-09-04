@@ -93,11 +93,11 @@ function MyApp(props) {
           />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          {/* <Outputs
+          <Outputs
             outputsData={appData.outputs}
             inputsData={appData.inputs}
             updateValue={updateValue}
-          /> */}
+          />
         </TabPanel>
       </SwipeableViews>
      
