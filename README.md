@@ -1,14 +1,17 @@
+## <a name="webapp"></a>L'Application Web
+
+Lien vers l'Application Web: <a href="https://xenodochial-lamarr-55e1b6.netlify.app/" target="_blank">https://xenodochial-lamarr-55e1b6.netlify.app/</a>
+
 ## Sommaire
 
 - [Description](#description)
 - [Objectif](#objectif)
-- [L'Application Web](#webapp)
 - [Démarrage](#demarrage)
 - [License](#license)
 
 ## <a name="description"></a>Description
 
-La résistance à la compression est la capacité d'un matériau ou d'une structure à résister à des charges tendant à réduire la taille, par opposition à la résistance à la traction, qui représente la capacité de matériau à résister aux charges tendant à s'allonger.
+La résistance à la compression est la capacité d'un matériau ou d'une structure à résister à des charges tendant à réduire la taille, par opposition à la résistance à la traction, qui représente la capacité de matériau à résister aux charges tendant à l'allonger.
 
 La résistance à la compression est l'une des propriétés techniques les plus importantes du béton. C'est une pratique industrielle standard que le béton soit classé en fonction des grades. Cette qualité n'est rien d'autre que la résistance à la compression du cube ou du cylindre de béton. Les échantillons de cube ou de cylindre sont généralement testés sous une machine d'essai de compression pour obtenir la résistance à la compression du béton. Les conditions de test varient d'un pays à l'autre en fonction du code de conception.
 
@@ -25,10 +28,6 @@ L'objectif de l'Application est de pouvoir prédire la résistance à la compres
 Le Notebook suivant présente l'analyse:
 Testez l'application directement: <a href="https://colab.research.google.com/drive/1okQIlRNIpAuLSbKngyIhBIzj4aXyVOl2?usp=sharing" target="_blank">lien vers le notebook</a>
 
-
-## <a name="webapp"></a>L'Application Web
-
-Testez l'application directement: <a href="https://xenodochial-lamarr-55e1b6.netlify.app/" target="_blank">lien vers l'application web</a>
 
 ## <a name="demarrage"></a>Démarrage
 
@@ -49,4 +48,4 @@ Cette application permet de prédire la résistance à la compression suivant la
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2019 © <a href="http://triazur.com" target="_blank">TRIAZUR</a>.
+- Copyright 2020 © <a href="https://www.tridyme.com/fr" target="_blank">TriDyme</a>.
