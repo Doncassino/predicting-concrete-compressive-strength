@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import * as tf from '@tensorflow/tfjs';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ChartElem from '../../../Components/ChartElem';
@@ -23,6 +23,9 @@ const Inputs = ({
   updateValue
 }) => {
   const classes = useStyles();
+  const [data, setData] = useState();
+  const [model, setModel] = useState();
+  const [prediction, setPrediction] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +39,7 @@ const Inputs = ({
     fetchData();
   }, []);
 
+  const loadModel = async() => {}
 
   return (
     <div className={classes.root}>

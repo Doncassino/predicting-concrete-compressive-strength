@@ -11,7 +11,6 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppContainerElem from './Components/AppContainerElem';
 
 import MyApp from './Views/MyApp/';
-import Page1 from './Views/Page1/';
 
 const Menu = {
   MenuNavBar: [
