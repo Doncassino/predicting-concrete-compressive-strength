@@ -89,6 +89,7 @@ function MyApp(props) {
           <Inputs 
             inputsData={appData.inputs}
             updateValue={updateValue}
+            handleChange={handleChange}
           />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>

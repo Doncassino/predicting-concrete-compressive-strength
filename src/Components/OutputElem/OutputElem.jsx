@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: '25ch',
+    width: '35ch',
   },
   input: {
     color: 'blue',
@@ -37,10 +37,25 @@ const OutputElem = ({
   data,
   inputsData,
   calculationFunctions,
-  updateValue
+  // updateValue
 }) => {
   const classes = useStyles();
-  const outputValue = calculationFunctions(inputsData);
+  const [ outputValue, setOutputValue ] = useState(data.value);
+
+	useEffect(() => {
+    const computeData = async () => {
+      await calculationFunctions(inputsData)
+      .then((res) => {
+        setOutputValue(res);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
+    computeData();
+	}, []);
+
+  //const outputValue = calculationFunctions(inputsData);
   return (
     <div className={classes.root}>
       <FormControl
@@ -70,42 +85,5 @@ const OutputElem = ({
     </div>
   );
 };
-
-// const OutputElem1 = ({
-//   data,
-//   inputsData,
-//   calculationFunctions,
-//   updateValue
-// }) => {
-//   const outputValue = calculationFunctions(inputsData);
-//   return (
-//     <InputGroup className="outputElem">
-//       <InputGroupAddon className="groupAddon" addonType="prepend">
-//         <InputGroupText className="groupText">{data.text}</InputGroupText>
-//       </InputGroupAddon>
-//       <InputGroupAddon className="groupAddon" addonType="prepend">
-//         <ToolTips
-//           description={data.description}
-//           target={data.text}
-//         />
-//       </InputGroupAddon>
-//       <Input
-//         className="inputValue"
-//         type="number"
-//         name={data.name}
-//         placeholder={data.name}
-//         value={outputValue}
-//       />
-//       <InputGroupAddon addonType="append">
-//         <Input
-//           className="inputUnit"
-//           type="text"
-//           value={data.unit}
-//           disabled
-//         />
-//       </InputGroupAddon>
-//     </InputGroup>
-//   );
-// };
 
 export default OutputElem;

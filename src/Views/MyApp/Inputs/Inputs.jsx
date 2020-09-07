@@ -23,15 +23,11 @@ const Inputs = ({
   updateValue
 }) => {
   const classes = useStyles();
-  const [data, setData] = useState();
-  const [model, setModel] = useState();
-  const [prediction, setPrediction] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8500/data`);
-        console.log(data)
+        
       } catch (error) {
         console.log(error)
       }
@@ -39,78 +35,53 @@ const Inputs = ({
     fetchData();
   }, []);
 
-  const loadModel = async() => {}
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12}>
           <CardElem
-            title="My Inputs"
-            subtitle="Composition"
+            title="Concrete Composition"
+            subtitle="Inputs"
           >
-            <div>
-              <InputElem 
-                data={inputsData.cement}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.furnace_slag}
-                updateValue={updateValue}
-              /> 
-              <InputElem 
-                data={inputsData.fly_ash}
-                updateValue={updateValue}
-              />              
-              <InputElem 
-                data={inputsData.water}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.super_plasticizer}
-                updateValue={updateValue}
-              />   
-              <InputElem 
-                data={inputsData.coarse_agg}
-                updateValue={updateValue}
-              />  
-              <InputElem 
-                data={inputsData.fine_agg}
-                updateValue={updateValue}
-              />
-              <InputElem 
-                data={inputsData.age}
-                updateValue={updateValue}
-              />  
-            </div>
-          </CardElem>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <CardElem
-            title="Prediction of Concrete Compressive Strength"
-            subtitle=""
-          >
-            <div>
-
-
-            </div>
-          </CardElem>
-          <CardElem
-            title="Concrete Compressive Strength"
-            subtitle="per days"
-          >
-            <ChartElem
-                dataForChart={{
-                  chartTitle: '',
-                  value: [
-                    {x: 0, y: 0},
-                    {x: 28, y: 30},
-                    {x: 365, y: 60}
-                  ],
-                  axisName: {x: 'age ', y: 'Concrete compressive strength '},
-                  unit: {x: 'day', y: 'MPa, megapascals'}
-                }}
-              />
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <InputElem 
+                  data={inputsData.cement}
+                  updateValue={updateValue}
+                />
+                <InputElem 
+                  data={inputsData.furnace_slag}
+                  updateValue={updateValue}
+                /> 
+                <InputElem 
+                  data={inputsData.fly_ash}
+                  updateValue={updateValue}
+                />              
+                <InputElem 
+                  data={inputsData.water}
+                  updateValue={updateValue}
+                />
+                <InputElem 
+                  data={inputsData.super_plasticizer}
+                  updateValue={updateValue}
+                />   
+                <InputElem 
+                  data={inputsData.coarse_agg}
+                  updateValue={updateValue}
+                />  
+                <InputElem 
+                  data={inputsData.fine_agg}
+                  updateValue={updateValue}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <InputElem 
+                  data={inputsData.age}
+                  updateValue={updateValue}
+                />  
+              </Grid>
+            </Grid>
           </CardElem>
         </Grid>
       </Grid>

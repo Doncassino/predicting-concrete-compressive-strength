@@ -18,17 +18,9 @@ const chartOptions = (data) => {
   const Xminmax = findMinMax(data.value, 'x');
   const Yminmax = findMinMax(data.value, 'y');
   const Xmin = Xminmax[0];
-  let Xmax = Xminmax[1];
+  const Xmax = Xminmax[1];
   const Ymin = Yminmax[0];
-  let Ymax = Yminmax[1];
-
-  const DeltaX = Xmax - Xmin;
-  const DeltaY = Ymax - Ymin;
-
-  const DeltaMax = Math.max(DeltaX, DeltaY);
-
-  Xmax = Xmin + DeltaMax;
-  Ymax = Ymin + DeltaMax;
+  const Ymax = Yminmax[1];
 
   return {
     showLines: true,
