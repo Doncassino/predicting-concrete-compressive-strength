@@ -1,4 +1,12 @@
-## Description
+## Sommaire
+
+- [Description](#description)
+- [Objectif](#objectif)
+- [L'Application Web](#webapp)
+- [Démarrage](#demarrage)
+- [License](#license)
+
+## <a name="description"></a>Description
 
 La résistance à la compression est la capacité d'un matériau ou d'une structure à résister à des charges tendant à réduire la taille, par opposition à la résistance à la traction, qui représente la capacité de matériau à résister aux charges tendant à s'allonger.
 
@@ -10,13 +18,15 @@ La résistance à la compression réelle du béton (MPa) pour un mélange donné
 
 La résistance à la compression du béton peut être calculée par la charge de rupture divisée par la section transversale résistant à la charge et rapportée en livres par pouce carré en unités usuelles aux États-Unis et en méga pascals (MPa) en unités SI. Les exigences de résistance à la compression du béton peuvent varier de 2500 psi (17 MPa) pour le béton résidentiel à 4000 psi (28 MPa) et plus dans les structures commerciales. Des résistances plus élevées allant jusqu'à 70 MPa (10 000 psi) sont spécifiées pour certaines applications.
 
-## Sommaire
+## <a name="objectif"></a>Objectif
 
-- [Exemple](#exemple)
-- [Démarrage](#demarrage)
-- [License](#license)
+L'objectif de l'Application est de pouvoir prédire la résistance à la compression du béton grâce à une base de donnée d'Essais en Laboratoire de 1030 échantillons sur laquelle a tourné des algorithmes de Machine Learning et de Deep Learning.
 
-## <a name="exemple"></a>Exemple
+Le Notebook suivant présente l'analyse:
+Testez l'application directement: <a href="https://colab.research.google.com/drive/1okQIlRNIpAuLSbKngyIhBIzj4aXyVOl2?usp=sharing" target="_blank">lien vers le notebook</a>
+
+
+## <a name="webapp"></a>L'Application Web
 
 Testez l'application directement: <a href="https://xenodochial-lamarr-55e1b6.netlify.app/" target="_blank">lien vers l'application web</a>
 
