@@ -24,6 +24,7 @@ La résistance à la compression du béton peut être calculée par la charge de
 ## <a name="objectif"></a>Objectif
 
 L'objectif de l'Application est de pouvoir prédire la résistance à la compression du béton grâce à une base de donnée d'Essais en Laboratoire de 1030 échantillons sur laquelle a tourné des algorithmes de Machine Learning et de Deep Learning.
+Base de données: <a href="https://esilab.s3.eu-west-3.amazonaws.com/datasets_compressive_strength_concrete.csv" target="_blank">datasets_compressive_strength_concrete.csv</a>
 
 Le Notebook suivant présente l'analyse:
 Testez l'application directement: <a href="https://colab.research.google.com/drive/1okQIlRNIpAuLSbKngyIhBIzj4aXyVOl2?usp=sharing" target="_blank">lien vers le notebook</a>
