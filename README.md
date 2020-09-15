@@ -35,7 +35,7 @@ Testez l'application directement: <a href="https://colab.research.google.com/dri
 Clonez le projet, puis, entrez dans le dossier, lancez l'installation des modules **Node.js** via la commande `npm install` et enfin démarrez l'application avec `npm start`:
 
 ```shell
-$ cd ./predicting-concrete-compressive-stress
+$ cd ./predicting-concrete-compressive-strength
 $ npm install
 $ npm start
 ```
