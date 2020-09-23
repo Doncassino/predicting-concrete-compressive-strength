@@ -6,10 +6,11 @@ import {
 	AppBar,
 	Toolbar,
 	Typography,
-	Button,
+	SvgIcon,
 	IconButton
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import ConcreteStrength from './img/ConcreteStrength.svg';
 
 const NavBarElem = ({
   title,
@@ -42,6 +43,10 @@ const NavBarElem = ({
         >
           <MenuIcon />
         </IconButton>
+        <img
+          src={ConcreteStrength}
+          style={{ height: '3em', marginRight: '1em' }}
+        />
         <Typography variant="h6" noWrap>
           {title}
         </Typography>
